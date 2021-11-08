@@ -24,3 +24,10 @@ guess_input = [3,3,3,3]
 
 ```
 ---
+8/11/21
+* Main problem of duplicates in input has been solved.
+* All restraint of input has been handled including:
+  * input digits less or more than 4
+  * Out of range digits (less than 1 or more than 8)
+  * No symbols/characters (by convertinb it all to 0)
+---
