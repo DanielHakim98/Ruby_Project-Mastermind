@@ -31,3 +31,7 @@ guess_input = [3,3,3,3]
   * Out of range digits (less than 1 or more than 8)
   * No symbols/characters (by convertinb it all to 0)
 ---
+9/11/21
+* Add condition when a player win or lose.
+* Add GUI Board to show previous selection/combination of sequences.
+---
