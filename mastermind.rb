@@ -16,13 +16,14 @@ def check_input(guess_str)
   guess_str
 end
 
-def show_previous(previous_indicator, previous_select, guess_str, red_clue)
+def show_previous(previous_indicator, previous_select, guess_str, red_clue, white_clue, count)
   previous_select.push(guess_str)
-  previous_indicator.push(red_clue)
-  puts "\n|----------Game Board----------|"
+  previous_indicator[count] = red_clue + white_clue
+  puts "\n+------------------------------Game Board------------------------------------------+"
   previous_select.each_with_index do |row,i|
-    puts "#{row} "
-    #puts  "#{previous_indicator[i]}"
+    print "       Guess ##{i+1}: #{row}  "
+    puts "            Guess's clue: #{previous_indicator[i]}"
+    puts "+----------------------------------------------------------------------------------+"
   end
 end
 
@@ -56,12 +57,12 @@ guess_this.map! do |element|
   element = item
   rand_num.delete(item)
 end
-p guess_this
+#p guess_this
 
 win = 0
 10.times do |count|
   guess_str = guess_the_input(count)
-  puts "input: #{guess_str}"
+  puts "Input: #{guess_str}"
 
   guess_this.each_with_index do |digit, i|
     if guess_str[i] == digit
@@ -71,8 +72,8 @@ win = 0
     end
   end
 
-  p red_clue.concat(white_clue)
-  show_previous(previous_indicator, previous_select, guess_str, red_clue)
+  print "Game's clue: #{red_clue + white_clue}\n"
+  show_previous(previous_indicator, previous_select, guess_str, red_clue, white_clue, count)
 
   win = check_win(red_clue)
   break if win>0

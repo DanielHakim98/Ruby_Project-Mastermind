@@ -27,11 +27,15 @@ guess_input = [3,3,3,3]
 8/11/21
 * Main problem of duplicates in input has been solved.
 * All restraint of input has been handled including:
-  * input digits less or more than 4
+  * Input digits less or more than 4
   * Out of range digits (less than 1 or more than 8)
   * No symbols/characters (by convertinb it all to 0)
 ---
 9/11/21
 * Add condition when a player win or lose.
 * Add GUI Board to show previous selection/combination of sequences.
+---
+10/11/21
+* Fix GUI Board display. Now it shows previous sequences selected and the indicator for each previous sequences.
+* Next plan is to create options for player to be code breaker or code maker.
 ---
