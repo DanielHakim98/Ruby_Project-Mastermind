@@ -44,3 +44,8 @@ guess_input = [3,3,3,3]
 * Working on Code setter features which allows the player to set the secret code for the COM to guess it.
 * As to obey the rules of 'no duplicates' in secret code, check duplicate features is added to put restraint on the secret code.
 ---
+12/11/21
+* Add options for player to be 'Code Breaker' or 'Code Setter'
+* Refine the code to abide the Official Ruby Style Guide (Still not fully 'clean').
+* Next: Build algorithm for COM to crack the secret code in 'Code Setter' mode.
+---
